@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>OMC - Orders For Jane Doe</title>
 <meta name="viewport" content="width=device-width, inital-scale=1.0">
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <link href="../css/styles.css" rel="stylesheet">
+<style>
+.row {
+	background-color: #C4C4C7;
+}
+</style>
 </head>
 <body>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="../js/bootstrap.js"></script>
 
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed"
@@ -22,98 +26,96 @@
 				</button>
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">OMC <span class="sr-only">(current)</span></a></li>
-					<!-- <a class="navbar-brand" href="#">OMC</a> -->
 				</ul>
 			</div>
 
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<!-- <li class="active"><a href="#">Orders <span class="sr-only">(current)</span></a></li> -->
-					<li><a href="#">Orders</a></li>
-					<li><a href="#">Reports</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-expanded="false">Tools
-							<span class="caret"></span>
-					</a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-						</ul></li>
-				</ul>
-				<form class="navbar-form navbar-left" role="search">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Search">
-					</div>
-					<button type="submit" class="btn btn-default">Submit</button>
-				</form>
-				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-expanded="false">Scarlett
-							Johansson <span class="caret"></span>
-					</a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">View</a></li>
-							<li><a href="#">View somthing else</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Logout</a></li>
-						</ul></li>
-				</ul>
+				<div>
+					<ul class="nav navbar-nav">
+						<li><a href="#">Orders</a></li>
+						<li><a href="#">Reports</a></li>
+					</ul>
+				</div>
+
+				<div>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown" role="button" aria-expanded="false">Scarlett
+								Johansson <span class="caret"></span>
+						</a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">View</a></li>
+								<li><a href="#">View somthing else</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Logout</a></li>
+							</ul></li>
+					</ul>
+				</div>
+
+				<div>
+					<form class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+				</div>
 			</div>
 		</div>
 	</nav>
 
 	<div class="container">
-		<div class="row" style="padding-top: 60px">
-			<h1>Orders for Jane Doe</h1>
-			<table class="table">
-				<tbody>
-					<tr>
-						<td>1970-01-01 00:00:00</td>
-						<td><a href="order.html">12345</a></td>
-						<td>Fancy Faucet In Mahogany, Big Bricks, 3 more items...</td>
-						<td>Build.com</td>
-					</tr>
-					<tr>
-						<td>1970-01-01 00:00:00</td>
-						<td><a href="order.html">32452</a></td>
-						<td>Fancy Faucet In Mahogany, Big Bricks, 3 more items...</td>
-						<td>FaucetDirect.com</td>
-					</tr>
-					<tr>
-						<td>1970-01-01 00:00:00</td>
-						<td><a href="order.html">32452</a></td>
-						<td>Fancy Faucet In Mahogany, Big Bricks, 3 more items...</td>
-						<td>FaucetDirect.com</td>
-					</tr>
-					<tr>
-						<td>1970-01-01 00:00:00</td>
-						<td><a href="order.html">32452</a></td>
-						<td>Fancy Faucet In Mahogany, Big Bricks, 3 more items...</td>
-						<td>FaucetDirect.com</td>
-					</tr>
-					<tr>
-						<td>1970-01-01 00:00:00</td>
-						<td><a href="order.html">32452</a></td>
-						<td>Fancy Faucet In Mahogany, Big Bricks, 3 more items...</td>
-						<td>LightingDirect.com</td>
-					</tr>
-					<tr>
-						<td>1970-01-01 00:00:00</td>
-						<td><a href="order.html">32452</a></td>
-						<td>Fancy Faucet In Mahogany, Big Bricks, 3 more items...</td>
-						<td>FaucetDirect.com</td>
-					</tr>
-				</tbody>
-			</table>
-			<div>
-				<p class="text-right">
-					<a href="">Older Orders</a>
-				</p>
+		<div class="row" style="padding: 60px">
+			<div class="box">
+				<h1>Orders for Jane Doe</h1>
+				<table class="table">
+					<tbody>
+						<tr>
+							<td>1970-01-01 00:00:00</td>
+							<td><a href="order.html">12345</a></td>
+							<td>Fancy Faucet In Mahogany, Big Bricks, 3 more items...</td>
+							<td>Build.com</td>
+						</tr>
+						<tr>
+							<td>1970-01-01 00:00:00</td>
+							<td><a href="order.html">32452</a></td>
+							<td>Fancy Faucet In Mahogany, Big Bricks, 3 more items...</td>
+							<td>FaucetDirect.com</td>
+						</tr>
+						<tr>
+							<td>1970-01-01 00:00:00</td>
+							<td><a href="order.html">32452</a></td>
+							<td>Fancy Faucet In Mahogany, Big Bricks, 3 more items...</td>
+							<td>FaucetDirect.com</td>
+						</tr>
+						<tr>
+							<td>1970-01-01 00:00:00</td>
+							<td><a href="order.html">32452</a></td>
+							<td>Fancy Faucet In Mahogany, Big Bricks, 3 more items...</td>
+							<td>FaucetDirect.com</td>
+						</tr>
+						<tr>
+							<td>1970-01-01 00:00:00</td>
+							<td><a href="order.html">32452</a></td>
+							<td>Fancy Faucet In Mahogany, Big Bricks, 3 more items...</td>
+							<td>LightingDirect.com</td>
+						</tr>
+						<tr>
+							<td>1970-01-01 00:00:00</td>
+							<td><a href="order.html">32452</a></td>
+							<td>Fancy Faucet In Mahogany, Big Bricks, 3 more items...</td>
+							<td>FaucetDirect.com</td>
+						</tr>
+					</tbody>
+				</table>
+				<div>
+					<p class="text-right">
+						<a href="">Older Orders</a>
+					</p>
+				</div>
+				<a href="add_order.html" class="btn btn-primary">Create Order</a>
 			</div>
-			<a href="add_order.html"
-				class="btn btn-primary">Create Order</a>
 		</div>
 	</div>
 </body>
