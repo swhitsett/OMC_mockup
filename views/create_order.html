@@ -25,6 +25,11 @@
 		$("#navigation").load("nav.html");
 	});
 </script>
+<script>
+	function goBack() {
+		window.history.back();
+	}
+</script>
 </head>
 <body>
 	<div id="navigation"></div>
@@ -171,7 +176,7 @@
 		</div>
 		<div class="row tlrow" style="padding-left: 1em; padding-right: 1em;">
 			<div class="pull-right">
-				<button type="button" class="btn btn-default">Cancel</button>
+				<button type="button" class="btn btn-default" onclick="goBack()">Cancel</button>
 				<button type="button" class="btn btn-primary">Create</button>
 			</div>
 		</div>
