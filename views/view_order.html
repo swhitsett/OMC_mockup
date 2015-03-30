@@ -265,14 +265,49 @@
 					<h4 class="modal-title" id="add-item-label">Create Return</h4>
 				</div>
 				<div class="modal-body">
-					<h2>OrderID: 005958213</h2>
+					<!-- <h2>OrderID: 005958213</h2>
 					<div class="input-group">
 						<span class="input-group-addon" id="basic-addon1">Email</span> <input
 							type="text" class="form-control"
 							placeholder="example@example.com" aria-describedby="basic-addon1">
 					</div>
 					<p>Reason for Return</p>
-					<textarea class="form-control" rows="3"></textarea>
+					<textarea class="form-control" rows="3"></textarea> -->
+					<div class="row" style="background-color: white">
+						<div class="col-md-6">
+							<div>
+								<div>
+									<form>
+										<div>
+											<label for="email">Order Number: 7465736</label>
+											<div style="margin-bottom: 1em">
+												<label>Email:</label><input name="email" type="email">
+											</div>
+											<div>
+												<div>
+													<label for="email">Reason for Return:</label><br />
+													<textarea id="email"></textarea>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<ul style="padding: 1em; list-style-type: none;">
+								<li><input type="checkbox" style="margin-right: 5px;"><label>Kohler
+										K-394-4</label></li>
+								<li><input type="checkbox" style="margin-right: 5px;"><label>Delta
+										3575-MPU-DST</label></li>
+								<li><input type="checkbox" style="margin-right: 5px;"><label>Moen
+										T6620</label></li>
+							</ul>
+							<div class="text-right">
+								Subtotal: $1,876 <br /> Tax: $192<br /> Total: $2,068
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
