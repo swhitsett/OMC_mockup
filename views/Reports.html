@@ -30,12 +30,16 @@
 	        data.addColumn('number', 'Amount');
 	        data.addRows([
 	          ['Zack Tarf', 300.00],
-	          ['Katie Swift', 125.00],
-	          ['Jennifer Smith', 1]
+	          ['Katie Swift', 278.00],
+	          ['Other Rep', 125.00],
+	          ['Other Rep', 225.00],
+	          ['Jennifer Smith', 100.00]
 	        ]);
 
 	        // Set chart options
-	        var options = {'title':'This weeks sales'};
+	        var options = {'title':'This weeks sales',
+                     'width':800,
+                     'height':600};
 
 	        // Instantiate and draw our chart, passing in some options.
 	        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
@@ -103,13 +107,14 @@
 						<div class="col-md-11">
 							<div class="container">
 							  <div class="row">
-							    <!-- <ul class="nav nav-tabs">
-								  <li role="presentation" class="active"><a href="#">Home</a></li>
-								  <li role="presentation"><a href="#">Profile</a></li>
-								  <li role="presentation"><a href="#">Messages</a></li>
-								</ul> -->
+							    <ul class="nav nav-tabs">
+								  <li role="presentation" class="active"><a href="#">Report 1</a></li>
+								  <li role="presentation"><a href="#">Report 2</a></li>
+								  <li role="presentation"><a href="#">Report 3</a></li>
+								</ul>
+								<div id="chart_div"></div>
 							    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
-							      <div class="tabbable tabs-left">
+							     <!--  <div class="tabbable tabs-left">
 							        <ul class="nav nav-tabs">
 							          <li><a href="#a" data-toggle="tab">One</a></li>
 							          <li class="active"><a href="#b" data-toggle="tab">Two</a></li>
@@ -130,7 +135,7 @@
 							         	3
 							         </div>
 							        </div>
-							      </div>
+							      </div> -->
 							    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 							  </div><!-- /row -->
 						</div>
