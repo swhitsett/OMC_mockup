@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+
+.row {
+	background-color: #C4C4C7;
+}
+
+.ui-autocomplete {
+	/* ref: http://stackoverflow.com/a/10675943/577298 */
+	position: absolute;
+	cursor: default;
+	z-index: 30000 !important;
+}

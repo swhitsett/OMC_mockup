@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, inital-scale=1.0">
-<link href="../css/bootstrap.min.css" rel="stylesheet">
-<link href="../css/styles.css" rel="stylesheet">
 <style>
 .row {
-	background-color: #C4C4C7;
 	max-width: 1700px;
 }
 </style>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="../js/bootstrap.js"></script>
-<script>
-	$(function() {
-		$("#navigation").load("nav.html");
-	});
-</script>
 <script>
 	function goBack() {
 		window.history.back();
 	}
+</script>
+<!-- boilerplate head tags -->
+<meta http-equiv="Content-Type"
+	content="text/html; charset=windows-1252">
+<meta name="viewport" content="width=device-width, inital-scale=1.0">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/styles.css" rel="stylesheet">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link rel="stylesheet"
+	href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<script src="../js/local.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script>
+	$(function() {
+		$("#navigation").load("nav.html", function() {
+			//ref: https://jqueryui.com/autocomplete/
+			//ref: http://stackoverflow.com/a/4450861/577298
+			$("#search").autocomplete({
+				source : availableTags
+			});
+		});
+	});
 </script>
 </head>
 <body>
@@ -110,8 +123,9 @@
 											<div class="col-sm-6 col-sm-6">
 												<!-- Description -->
 												<a
-													href="http://www.build.com/kohler-k-99261/s1087924?uid=2612771">Kohler K-99261</a>
-													
+													href="http://www.build.com/kohler-k-99261/s1087924?uid=2612771">Kohler
+													K-99261</a>
+
 											</div>
 											<div class="col-sm-1 col-sm-1">
 												<!-- Quanity -->
@@ -133,7 +147,8 @@
 											<div class="col-sm-6 col-sm-6">
 												<!-- Description -->
 												<a
-													href="http://www.build.com/minkaaire-concept-ii-44-ceiling-fan/s459973">MinkaAire Concept II 44</a>
+													href="http://www.build.com/minkaaire-concept-ii-44-ceiling-fan/s459973">MinkaAire
+													Concept II 44</a>
 											</div>
 											<div class="col-sm-1 col-sm-1">
 												<!-- Quanity -->
@@ -177,8 +192,8 @@
 										Total</b><br>
 								</div>
 								<div class="col-xs-2">
-									952.45<br> 0.00<br> 0.00<br> 0.00<br>
-									0.00<br> $952.45<br>
+									952.45<br> 0.00<br> 0.00<br> 0.00<br> 0.00<br>
+									$952.45<br>
 								</div>
 
 							</div>
@@ -276,7 +291,8 @@
 									<form>
 										<div>
 											<div style="margin-bottom: 1em">
-												<label for="email"style="margin-right: 5px;">Email:</label><input name="email" type="email">
+												<label for="email" style="margin-right: 5px;">Email:</label><input
+													name="email" type="email">
 											</div>
 											<div>
 												<div>
