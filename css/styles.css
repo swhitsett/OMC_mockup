@@ -4,6 +4,19 @@
 	background-color: #C4C4C7;
 }
 
+.tlrow {
+	padding-bottom: 1em;
+}
+
+.tlrow:first-child {
+	/*padding-top: 40px;*/
+	padding-top: 1em;
+}
+
+.container {
+	padding-top: 50px;
+}
+
 .ui-autocomplete {
 	/* ref: http://stackoverflow.com/a/10675943/577298 */
 	position: absolute;
