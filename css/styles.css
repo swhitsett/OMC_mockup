@@ -1,5 +1,9 @@
 @CHARSET "UTF-8";
 
+div#content {
+	padding-top: 50px;
+}
+
 .row {
 	background-color: #C4C4C7;
 }
@@ -9,12 +13,11 @@
 }
 
 .tlrow:first-child {
-	/*padding-top: 40px;*/
 	padding-top: 1em;
 }
 
-.container {
-	padding-top: 50px;
+.tlrow:last-child {
+	padding-bottom: 0;
 }
 
 .ui-autocomplete {
