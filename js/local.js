@@ -4,17 +4,20 @@ var availableTags = [ "Sarah Jensen", "12345", "32452", "Billy Johnson" ];
 var peoplesNames = [ "Billy Johnson", "Scarlet Johanson", "Sarah Jensen", ];
 
 var billingAddress = [ [ "123 Main st", "Chico", "95926", "CA" ],
-		[ "123 Nord", "Chico", "54321", "NY" ],
-		[ "626 B st", "Los Angles", "95933", "CA" ] ];
+					   [ "123 Nord", "Chico", "54321", "NY" ],
+					   [ "626 B st", "Los Angles", "95933", "CA" ] ];
 
-var shippingAddress = [ [ "123 Main st", "Chico", "95926" ],
-		[ "123 Nord", "Chico", "54321" ], [ "626 B st", "Los Angles", "95933" ] ];
+var shippingAddress = [ [ "Billy Johnson", "123 Main st", "Chico", "CA", "95926" ],
+						[ "Scarlet Johanson", "123 Nord", "Chico", "NY", "54321" ], 
+						[ "Sarah Jensen", "626 B st", "Los Angles", "CA", "95933" ] ];
 
 var paymentInfo = [ [ "Visa", "****6453", "09/12" ],
-		[ "Amex", "****7763", "02/18" ], [ "Master Card", "****9944", "11/20" ] ];
+					[ "Amex", "****7763", "02/18" ], 
+					[ "Master Card", "****9944", "11/20" ] ];
 
 var userPrefrences = [ [ "No", "Yes", "Yes", "No" ],
-		[ "No", "Yes", "Yes", "No" ], [ "Yes", "Yes", "Yes", "No" ] ];
+					   [ "No", "Yes", "Yes", "No" ], 
+					   [ "Yes", "Yes", "Yes", "No" ] ];
 // ------------------------------------------------------------------------
 
 document.addEventListener("keyup", documentKeyUp, false);
