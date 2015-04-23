@@ -26,43 +26,38 @@ function documentKeyUp(e) {
 	if (keyCode == 113) {
 		// ref: http://stackoverflow.com/a/480754/577298
 		$("#search").focus();
+	} else if (keyCode == 27) {
+		document.getElementById("search-form").reset();
+		location.reload();
 	}
 }
 
 function setSearchHeader(search_term) {
-	$("#header")
-			.empty()
-			.append("<h1>Search	results for '" + search_term + "'</h1>")
-			.append(
-					"<p style='font-style:italic'>(hit Esc with the search box in focus to clear results)</p>");
+	$("#header").empty().append(
+			"<h1>Search	results for '" + search_term + "'</h1>").append(
+			"<p style='font-style:italic'>(hit Esc to clear results)</p>");
 }
 
 function searchKeyup(event) {
 	var keyCode = event.keyCode;
-	// clear search field on Escape
-	if (keyCode == 27) {
-		document.getElementById("search-form").reset();
-		location.reload();
-	} else {
-		var search = $("#search").val();
-		console.log("search term: " + search);
-		if (search == "Sarah Jensen") {
-			$("#search-results").load("sarah_jensen.html", function() {
-				setSearchHeader(search)
-			});
-		} else if (search == "Billy Johnson") {
-			$("#search-results").load("billy_johnson.html", function() {
-				setSearchHeader(search)
-			});
-		} else if (search == "12345") {
-			$("#search-results").load("12345.html", function() {
-				setSearchHeader(search)
-			});
-		} else if (search == "32452") {
-			$("#search-results").load("32452.html", function() {
-				setSearchHeader(search)
-			});
-		}
+	var search = $("#search").val();
+	console.log("search term: " + search);
+	if (search == "Sarah Jensen") {
+		$("#search-results").load("sarah_jensen.html", function() {
+			setSearchHeader(search)
+		});
+	} else if (search == "Billy Johnson") {
+		$("#search-results").load("billy_johnson.html", function() {
+			setSearchHeader(search)
+		});
+	} else if (search == "12345") {
+		$("#search-results").load("12345.html", function() {
+			setSearchHeader(search)
+		});
+	} else if (search == "32452") {
+		$("#search-results").load("32452.html", function() {
+			setSearchHeader(search)
+		});
 	}
 }
 
