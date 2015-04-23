@@ -25,56 +25,7 @@ p { margin:0 }
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 <script src="../js/local.js"></script>
 <script src="../js/bootstrap.js"></script>
-
-<script>
-	$(function() {
-		$("#navigation").load("nav.html", function() {
-			$("#search").autocomplete({
-				source : availableTags
-			});
-		});
-	});
-
-	function goBack() {
-		window.history.back();
-	}
-
-	$(function() {
-		$( "#searchNames" ).autocomplete({
-		  source: peoplesNames
-		});
-	});
-
-	function getValues(){
-
-		var usr_name = document.name4search.searchNames.value;;
-		var cus_id;
-
-		for(var i=0; i<peoplesNames.length; i++)
-			if(usr_name == peoplesNames[i])
-				cus_id = i;
-
-		// if(!cus_id){
-			document.getElementById("cus_name").innerHTML = peoplesNames[cus_id];
-			document.getElementById("b_addr").innerHTML = billingAddress[cus_id][0];
-			document.getElementById("b_city").innerHTML = billingAddress[cus_id][1];
-			document.getElementById("b_zip").innerHTML = billingAddress[cus_id][2];
-			document.getElementById("b_state").innerHTML = billingAddress[cus_id][3];
-			document.getElementById("s_addr").innerHTML = shippingAddress[cus_id][0];
-			document.getElementById("s_city").innerHTML = shippingAddress[cus_id][1];
-			document.getElementById("s_zip").innerHTML = shippingAddress[cus_id][2];
-			document.getElementById("card_type").innerHTML = paymentInfo[cus_id][0];
-			document.getElementById("card_num").innerHTML = paymentInfo[cus_id][1];
-			document.getElementById("card_exp").innerHTML = paymentInfo[cus_id][2];
-			document.getElementById("gift").innerHTML = userPrefrences[cus_id][0];
-			document.getElementById("exp_delivery").innerHTML = userPrefrences[cus_id][1];
-			document.getElementById("insurance").innerHTML = userPrefrences[cus_id][2];
-			document.getElementById("coupon").innerHTML = userPrefrences[cus_id][3];
-			// document.getElementById("work").innerHTML = "mrJEFF";
-		}
-		// else
-			// document.getElementById("cus_name").innerHTML = "error";
-</script>
+<script src="../js/new_order.js"></script><!-- Load search and new order features --> 
 
 </head>
 <body>
@@ -99,12 +50,12 @@ p { margin:0 }
 						<div class="panel panel-default height">
 							<div class="panel-heading">Billing Details</div>
 							<div class="panel-body">
-								<strong id="cus_name"></strong>
-										<p id="b_addr"></p>
-										<p id="b_city"></p> 
-										<p id="b_state"></p>
-										<p id="b_addr"></p> 
-								<strong id="b_zip"></strong><br>
+								<strong><input type="name" class="form-control" id="cus_name" placeholder="Coustmer Name"></input></strong>
+								<input type="name" class="form-control" id="b_addr" placeholder="Street Address"></input>
+								<input type="name" class="form-control" id="b_city" placeholder="City"></input>
+								<input type="name" class="form-control" id="b_state" placeholder="State"></input> 
+								<input type="name" class="form-control" id="b_zip" placeholder="Zip"></input>
+								<br>
 							</div>
 							<div class="text-right" style="padding: .5em">
 								<a href="">Edit</a>
@@ -115,9 +66,10 @@ p { margin:0 }
 						<div class="panel panel-default height">
 							<div class="panel-heading">Payment Information</div>
 							<div class="panel-body">
-								<p id="card_type"></p>
-								<p id="card_num"></p> 
-								<p id="card_exp"></p>
+								<input type="name" class="form-control" id="card_type" placeholder="Card Type"></input>
+								<input type="name" class="form-control" id="card_num" placeholder="Card #"></input> 
+								<input type="name" class="form-control" id="card_exp" placeholder="Exp Date"></input>
+								<br>
 							</div>
 							<div class="text-right" style="padding: .5em">
 								<a href="">Edit</a>
@@ -128,10 +80,11 @@ p { margin:0 }
 						<div class="panel panel-default height">
 							<div class="panel-heading">Order Preferences</div>
 							<div class="panel-body">
-								<p id="gift"></p>
-								<p id="exp_delivery"></p> 
-								<p id="insurance"></p>
-								<p id="coupon"></p>
+								<input type="name" class="form-control" id="gift" placeholder="Gift Item?"></input>
+								<input type="name" class="form-control" id="exp_delivery" placeholder="Express Delivery"></input>
+								<input type="name" class="form-control" id="insurance" placeholder="Insurance Value"></input> 
+								<input type="name" class="form-control" id="coupon" placeholder="Coupon"></input>
+								<br>
 							</div>
 							<div class="text-right" style="padding: .5em">
 								<a href="">Edit</a>
@@ -142,10 +95,12 @@ p { margin:0 }
 						<div class="panel panel-default height">
 							<div class="panel-heading">Shipping Address</div>
 							<div class="panel-body">
-								<p id="s_addr"></p>
-								<p id="s_city"></p> 
-								<p id="s_state"></p>
-								<p id="s_zip"></p>
+								<strong><input type="name" class="form-control" id="s_name" placeholder="Coustmer Name"></input></strong>
+								<input type="name" class="form-control" id="s_addr" placeholder="Street Address"></input>
+								<input type="name" class="form-control" id="s_city" placeholder="City"></input>
+								<input type="name" class="form-control" id="s_state" placeholder="State"></input> 
+								<input type="name" class="form-control" id="s_zip" placeholder="Zip"></input>
+								<br>
 							</div>
 							<div class="text-right" style="padding: .5em">
 								<a href="">Edit</a>
