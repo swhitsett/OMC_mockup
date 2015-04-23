@@ -17,7 +17,8 @@ function searchKeyup(event) {
 		document.getElementById("search-form").reset();
 		location.reload();
 	} else {
-		var search = document.getElementById("search").value
-		document.getElementById("content").innerHTML = search;
+		var search = $("#search").val();
+		console.log("search term: " + search);
+		$("#content").text(search);
 	}
 }
