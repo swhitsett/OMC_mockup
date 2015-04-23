@@ -4,6 +4,14 @@ div#content {
 	padding-top: 50px;
 }
 
+.panel-body {
+	background-color: #f5f5f5;
+}
+
+.panel-heading {
+	background-color: #f5f5f5;
+}
+
 .row {
 	background-color: #C4C4C7;
 }
@@ -14,10 +22,6 @@ div#content {
 
 .tlrow:first-child {
 	padding-top: 1em;
-}
-
-.tlrow:last-child {
-	padding-bottom: 0;
 }
 
 .ui-autocomplete {
