@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, inital-scale=1.0">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/styles.css" rel="stylesheet">
+<style>
+.row {
+	background-color: #C4C4C7;
+}
+
+.tlrow {
+	padding-bottom: 1em;
+}
+
+.tlrow:first-child {
+	padding-top: 40px;
+}
+p { margin:0 }
+</style>
+
+<!-- for search bar -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<script src="../js/local.js"></script>
+<script src="../js/bootstrap.js"></script>
+
+<script>
+	$(function() {
+		$("#navigation").load("nav.html", function() {
+			$("#search").autocomplete({
+				source : availableTags
+			});
+		});
+	});
+
+	function goBack() {
+		window.history.back();
+	}
+
+	$(function() {
+		$( "#searchNames" ).autocomplete({
+		  source: peoplesNames
+		});
+	});
+
+	function getValues(){
+
+		var usr_name = document.name4search.searchNames.value;;
+		var cus_id;
+
+		for(var i=0; i<peoplesNames.length; i++)
+			if(usr_name == peoplesNames[i])
+				cus_id = i;
+
+		// if(!cus_id){
+			document.getElementById("cus_name").innerHTML = peoplesNames[cus_id];
+			document.getElementById("b_addr").innerHTML = billingAddress[cus_id][0];
+			document.getElementById("b_city").innerHTML = billingAddress[cus_id][1];
+			document.getElementById("b_zip").innerHTML = billingAddress[cus_id][2];
+			document.getElementById("b_state").innerHTML = billingAddress[cus_id][3];
+			document.getElementById("s_addr").innerHTML = shippingAddress[cus_id][0];
+			document.getElementById("s_city").innerHTML = shippingAddress[cus_id][1];
+			document.getElementById("s_zip").innerHTML = shippingAddress[cus_id][2];
+			document.getElementById("card_type").innerHTML = paymentInfo[cus_id][0];
+			document.getElementById("card_num").innerHTML = paymentInfo[cus_id][1];
+			document.getElementById("card_exp").innerHTML = paymentInfo[cus_id][2];
+			document.getElementById("gift").innerHTML = userPrefrences[cus_id][0];
+			document.getElementById("exp_delivery").innerHTML = userPrefrences[cus_id][1];
+			document.getElementById("insurance").innerHTML = userPrefrences[cus_id][2];
+			document.getElementById("coupon").innerHTML = userPrefrences[cus_id][3];
+			// document.getElementById("work").innerHTML = "mrJEFF";
+		}
+		// else
+			// document.getElementById("cus_name").innerHTML = "error";
+</script>
+
+</head>
+<body>
+	<div id="navigation"></div>
+	<div id="search"></div>
+	<div class="container">
+		<div class="row tlrow" style="padding-left: 1em; padding-right: 1em;">
+			<h1>Create Order</h1>
+			<form name="name4search" method="get" action=" ">
+				<div class="col-xs-6">
+					<div class="form-group">
+						<input type="name" class="form-control" id="searchNames" placeholder="Enter Coustmer Name"></input>
+						<button type="button" class="btn btn-primary" onclick="getValues()">Select</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="row tlrow">
+			<div class="col-xs-12">
+				<div class="row">
+					<div class="col-xs-12 col-md-3 col-lg-3 pull-left">
+						<div class="panel panel-default height">
+							<div class="panel-heading">Billing Details</div>
+							<div class="panel-body">
+								<strong id="cus_name"></strong>
+										<p id="b_addr"></p>
+										<p id="b_city"></p> 
+										<p id="b_state"></p>
+										<p id="b_addr"></p> 
+								<strong id="b_zip"></strong><br>
+							</div>
+							<div class="text-right" style="padding: .5em">
+								<a href="">Edit</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-3 col-lg-3">
+						<div class="panel panel-default height">
+							<div class="panel-heading">Payment Information</div>
+							<div class="panel-body">
+								<p id="card_type"></p>
+								<p id="card_num"></p> 
+								<p id="card_exp"></p>
+							</div>
+							<div class="text-right" style="padding: .5em">
+								<a href="">Edit</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-3 col-lg-3">
+						<div class="panel panel-default height">
+							<div class="panel-heading">Order Preferences</div>
+							<div class="panel-body">
+								<p id="gift"></p>
+								<p id="exp_delivery"></p> 
+								<p id="insurance"></p>
+								<p id="coupon"></p>
+							</div>
+							<div class="text-right" style="padding: .5em">
+								<a href="">Edit</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-3 col-lg-3 pull-right">
+						<div class="panel panel-default height">
+							<div class="panel-heading">Shipping Address</div>
+							<div class="panel-body">
+								<p id="s_addr"></p>
+								<p id="s_city"></p> 
+								<p id="s_state"></p>
+								<p id="s_zip"></p>
+							</div>
+							<div class="text-right" style="padding: .5em">
+								<a href="">Edit</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row tlrow">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="text-center">
+							<strong>Order Summary</strong>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="table-responsive">
+							<table class="table table-condensed">
+								<thead>
+									<tr>
+										<td></td>
+										<td><strong>Item Name</strong></td>
+										<td class="text-center"><strong>Item Price</strong></td>
+										<td class="text-center"><strong>Item Quantity</strong></td>
+										<td class="text-right"><strong>Total</strong></td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<button class="btn btn-default">Remove</button>
+										</td>
+										<td style="vertical-align: middle">Samsung Galaxy S5</td>
+										<td class="text-center">$900.00</td>
+										<td class="text-center">1</td>
+										<td class="text-right">$900.00</td>
+									</tr>
+									<tr>
+										<td>
+											<button class="btn btn-default">Remove</button>
+										</td>
+										<td>Samsung Galaxy S5 Extra Battery</td>
+										<td class="text-center">$30.00</td>
+										<td class="text-center">1</td>
+										<td class="text-right">$30.00</td>
+									</tr>
+									<tr>
+										<td>
+											<button class="btn btn-default">Remove</button>
+										</td>
+										<td>Screen protector</td>
+										<td class="text-center">$7.00</td>
+										<td class="text-center">4</td>
+										<td class="text-right">$28.00</td>
+									</tr>
+									<tr>
+										<td class="highrow"></td>
+										<td class="highrow"></td>
+										<td class="highrow"></td>
+										<td class="highrow text-center"><strong>Subtotal</strong></td>
+										<td class="highrow text-right">$958.00</td>
+									</tr>
+									<tr>
+										<td class="emptyrow"></td>
+										<td class="emptyrow"></td>
+										<td class="emptyrow"></td>
+										<td class="emptyrow text-center"><strong>Shipping</strong></td>
+										<td class="emptyrow text-right">$20.00</td>
+									</tr>
+									<tr>
+										<td class="emptyrow"></td>
+										<td class="emptyrow"></td>
+										<td class="emptyrow"></td>
+										<td class="emptyrow text-center"><strong>Total</strong></td>
+										<td class="emptyrow text-right">$978.00</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div>
+							<button type="button" class="btn btn-default" data-toggle="modal"
+								data-target="#add-item">Add Item</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row tlrow" style="padding-left: 1em; padding-right: 1em;">
+			<div class="pull-right">
+				<button type="button" class="btn btn-default" onclick="goBack()">Cancel</button>
+				<button type="button" class="btn btn-primary">Create</button>
+			</div>
+		</div>
+
+		<!-- Add Item Dialog -->
+		<div class="modal fade" id="add-item" tabindex="-1" role="dialog"
+			aria-labelledby="add-item-label" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="add-item-label">Add Item</h4>
+					</div>
+					<div class="modal-body">
+						<form role="form">
+							<div class="form-group">
+								<div style="margin-bottom: 1em">
+									<label for="item-id">Item ID:</label><input class="pull-right"
+										name="item-id" type="text" />
+								</div>
+								<div>
+									<label for="quantity">Quantity:</label><input
+										class="pull-right" name="quantity" type="number" min="1"
+										value="1" />
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-primary">OK</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
