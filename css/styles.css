@@ -1,7 +1,6 @@
 @CHARSET "UTF-8";
 
 div#content {
-	padding-top: 50px;
 }
 
 .panel-body {
@@ -22,6 +21,10 @@ div#content {
 
 .tlrow:first-child {
 	padding-top: 1em;
+}
+
+#search-results {
+	margin-top: 50px;
 }
 
 .ui-autocomplete {
