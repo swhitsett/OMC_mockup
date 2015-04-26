@@ -1,7 +1,7 @@
 var availableTags = [ "Sarah Jensen", "12345", "32452", "Billy Johnson" ];
 
 // ------------------- User order Info -------------------------------
-var peoplesNames = [ "Billy Johnson", "Scarlet Johanson", "Sarah Jensen", ];
+var peoplesNames = [ "Billy Johnson", "Scarlet Johanson", "Sarah Jensen" ];
 
 var billingAddress = [ [ "123 Main st", "Chico", "95926", "CA" ],
 		[ "123 Nord", "Chico", "54321", "NY" ],
@@ -37,6 +37,16 @@ function setSearchHeader(search_term) {
 			"<h1>Search	results for '" + search_term + "'</h1>").append(
 			"<p style='font-style:italic'>(hit Esc to clear results)</p>");
 }
+
+$(function() {
+	$("#navigation").load("nav.html", function() {
+		//ref: https://jqueryui.com/autocomplete/
+		//ref: http://stackoverflow.com/a/4450861/577298
+		$("#search").autocomplete({
+			source : availableTags
+		});
+	});
+});
 
 function searchKeyup(event) {
 	var keyCode = event.keyCode;
