@@ -3,14 +3,14 @@ var availableTags = [ "Sarah Jensen", "12345", "32452", "Billy Johnson" ];
 // ------------------- User order Info -------------------------------
 var peoplesNames = [ "Billy Johnson", "Scarlet Johanson", "Sarah Jensen" ];
 
-var billingAddress = [ [ "123 Main st", "Chico", "95926", "CA" ],
+var billingAddress = [ [ "123 Main St", "Chico", "95926", "CA" ],
 		[ "123 Nord", "Chico", "54321", "NY" ],
-		[ "626 B st", "Los Angles", "95933", "CA" ] ];
+		[ "626 B St", "Los Angles", "95933", "CA" ] ];
 
 var shippingAddress = [
-		[ "Billy Johnson", "123 Main st", "Chico", "CA", "95926" ],
+		[ "Billy Johnson", "123 Main St", "Chico", "CA", "95926" ],
 		[ "Scarlet Johanson", "123 Nord", "Chico", "NY", "54321" ],
-		[ "Sarah Jensen", "626 B st", "Los Angles", "CA", "95933" ] ];
+		[ "Sarah Jensen", "626 B St", "Los Angles", "CA", "95933" ] ];
 
 var paymentInfo = [ [ "Visa", "****6453", "09/12" ],
 		[ "Amex", "****7763", "02/18" ], [ "Master Card", "****9944", "11/20" ] ];
@@ -73,4 +73,24 @@ function searchKeyup(event) {
 
 function goBack() {
 	window.history.go(-1);
+}
+
+function addNote() {
+	var now = new Date();
+	var ampm = 'AM';
+	var h = now.getHours();
+	var m = now.getMinutes();
+	var s = now.getSeconds();
+	if (h >= 12) {
+		if (h > 12)
+			h -= 12;
+		ampm = 'PM';
+	}
+
+	$("#notes").prepend(
+			"<div class='well'><p>" + now.toLocaleDateString("en-US") + " "
+					+ now.toLocaleTimeString() + "</p>"
+					+ $("#message-text").val() + "</div>");
+
+	$("#message-text").val('')
 }
