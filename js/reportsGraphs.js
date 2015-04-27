@@ -183,23 +183,23 @@ $(function () {
         series: [{
             type: 'column',
             name: 'Team Zoey',
-            data: [3, 2, 1, 3, 4]
+            data: [3, 2, 1, 3, 4, 4, 7, 4, 8, 5, 11, 4]
         }, {
             type: 'column',
             name: 'Ateam!',
-            data: [2, 3, 5, 7, 6]
+            data: [2, 3, 5, 7, 6, 2, 1, 3, 4, 4, 7, 1]
         }, {
             type: 'column',
             name: 'Team Rob',
-            data: [4, 3, 3, 9, 0]
+            data: [4, 3, 3, 9, 1, 2, 3, 5, 7, 6, 2, 1]
         }, {
             type: 'column',
             name: 'Team Awesome',
-            data: [3, 2, 1, 3, 4]
+            data: [3, 2, 1, 3, 4, 3, 2, 1, 3, 4, 4 ,3]
         }, {
             type: 'spline',
             name: 'Average',
-            data: [3, 2.67, 3, 6.33, 3.33],
+            data: [3, 2.67, 3, 6.33, 3.33, 7, 5 ,6, 8, 4, 7, 2],
             marker: {
                 lineWidth: 2,
                 lineColor: Highcharts.getOptions().colors[3],
@@ -209,17 +209,21 @@ $(function () {
             type: 'pie',
             name: 'Total for Year',
             data: [{
-                name: 'Jane',
+                name: 'Team Zoey',
                 y: 13,
-                color: Highcharts.getOptions().colors[0] // Jane's color
+                color: Highcharts.getOptions().colors[0] 
             }, {
-                name: 'John',
+                name: 'Ateam!',
+                y: 13,
+                color: Highcharts.getOptions().colors[1] 
+            }, {
+                name: 'Team Rob',
                 y: 23,
-                color: Highcharts.getOptions().colors[1] // John's color
+                color: Highcharts.getOptions().colors[2] 
             }, {
-                name: 'Joe',
+                name: 'Team Awesome',
                 y: 19,
-                color: Highcharts.getOptions().colors[2] // Joe's color
+                color: Highcharts.getOptions().colors[3] 
             }],
             center: [100, 80],
             size: 100,
