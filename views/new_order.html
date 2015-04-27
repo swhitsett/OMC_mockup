@@ -16,16 +16,23 @@
 .tlrow:first-child {
 	padding-top: 40px;
 }
-p { margin:0 }
+
+p {
+	margin: 0
+}
 </style>
 
 <!-- for search bar -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link rel="stylesheet"
+	href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 <script src="../js/local.js"></script>
 <script src="../js/bootstrap.js"></script>
-<script src="../js/new_order.js"></script><!-- Load search and new order features --> 
+<script src="../js/new_order.js"></script>
+<!-- Load search and new order features -->
 
 </head>
 <body>
@@ -37,8 +44,10 @@ p { margin:0 }
 			<form name="name4search" method="get" action=" ">
 				<div class="col-xs-6">
 					<div class="form-group">
-						<input type="name" class="form-control" id="searchNames" placeholder="Enter Coustmer Name"></input>
-						<button type="button" class="btn btn-primary" onclick="getValues()">Select</button>
+						<input type="name" class="form-control" id="searchNames"
+							placeholder="Enter Customer Name"></input>
+						<button type="button" class="btn btn-primary"
+							onclick="getValues()">Select</button>
 					</div>
 				</div>
 			</form>
@@ -50,12 +59,14 @@ p { margin:0 }
 						<div class="panel panel-default height">
 							<div class="panel-heading">Billing Details</div>
 							<div class="panel-body">
-								<strong><input type="name" class="form-control" id="cus_name" placeholder="Coustmer Name"></input></strong>
-								<input type="name" class="form-control" id="b_addr" placeholder="Street Address"></input>
-								<input type="name" class="form-control" id="b_city" placeholder="City"></input>
-								<input type="name" class="form-control" id="b_state" placeholder="State"></input> 
-								<input type="name" class="form-control" id="b_zip" placeholder="Zip"></input>
-								<br>
+								<strong><input type="name" class="form-control"
+									id="cus_name" placeholder="Customer Name"></input></strong> <input
+									type="name" class="form-control" id="b_addr"
+									placeholder="Street Address"></input> <input type="name"
+									class="form-control" id="b_city" placeholder="City"></input> <input
+									type="name" class="form-control" id="b_state"
+									placeholder="State"></input> <input type="name"
+									class="form-control" id="b_zip" placeholder="Zip"></input> <br>
 							</div>
 							<div class="text-right" style="padding: .5em">
 								<a href="">Edit</a>
@@ -66,10 +77,11 @@ p { margin:0 }
 						<div class="panel panel-default height">
 							<div class="panel-heading">Payment Information</div>
 							<div class="panel-body">
-								<input type="name" class="form-control" id="card_type" placeholder="Card Type"></input>
-								<input type="name" class="form-control" id="card_num" placeholder="Card #"></input> 
-								<input type="name" class="form-control" id="card_exp" placeholder="Exp Date"></input>
-								<br>
+								<input type="name" class="form-control" id="card_type"
+									placeholder="Card Type"></input> <input type="name"
+									class="form-control" id="card_num" placeholder="Card #"></input>
+								<input type="name" class="form-control" id="card_exp"
+									placeholder="Exp Date"></input> <br>
 							</div>
 							<div class="text-right" style="padding: .5em">
 								<a href="">Edit</a>
@@ -80,10 +92,13 @@ p { margin:0 }
 						<div class="panel panel-default height">
 							<div class="panel-heading">Order Preferences</div>
 							<div class="panel-body">
-								<input type="name" class="form-control" id="gift" placeholder="Gift Item?"></input>
-								<input type="name" class="form-control" id="exp_delivery" placeholder="Express Delivery"></input>
-								<input type="name" class="form-control" id="insurance" placeholder="Insurance Value"></input> 
-								<input type="name" class="form-control" id="coupon" placeholder="Coupon"></input>
+								<input type="name" class="form-control" id="gift"
+									placeholder="Gift Item?"></input> <input type="name"
+									class="form-control" id="exp_delivery"
+									placeholder="Express Delivery"></input> <input type="name"
+									class="form-control" id="insurance"
+									placeholder="Insurance Value"></input> <input type="name"
+									class="form-control" id="coupon" placeholder="Coupon"></input>
 								<br>
 							</div>
 							<div class="text-right" style="padding: .5em">
@@ -95,12 +110,14 @@ p { margin:0 }
 						<div class="panel panel-default height">
 							<div class="panel-heading">Shipping Address</div>
 							<div class="panel-body">
-								<strong><input type="name" class="form-control" id="s_name" placeholder="Coustmer Name"></input></strong>
-								<input type="name" class="form-control" id="s_addr" placeholder="Street Address"></input>
-								<input type="name" class="form-control" id="s_city" placeholder="City"></input>
-								<input type="name" class="form-control" id="s_state" placeholder="State"></input> 
-								<input type="name" class="form-control" id="s_zip" placeholder="Zip"></input>
-								<br>
+								<strong><input type="name" class="form-control"
+									id="s_name" placeholder="Coustmer Name"></input></strong> <input
+									type="name" class="form-control" id="s_addr"
+									placeholder="Street Address"></input> <input type="name"
+									class="form-control" id="s_city" placeholder="City"></input> <input
+									type="name" class="form-control" id="s_state"
+									placeholder="State"></input> <input type="name"
+									class="form-control" id="s_zip" placeholder="Zip"></input> <br>
 							</div>
 							<div class="text-right" style="padding: .5em">
 								<a href="">Edit</a>
