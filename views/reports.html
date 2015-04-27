@@ -34,18 +34,23 @@ p { margin:0 }
 <body>
 	<div id="navigation"></div>
 	<div id="search-results"></div>
-	
+
 	<div class="container">
 		<div class="row tlrow">
 			<div class="col-md-12">
-				<ul class="nav nav-tabs">
-					<li role="presentation" class="active"><a href="#">Report1</a>
-						<!-- <div id="graph1"></div> -->
-					</li>
-					<li role="presentation"><a href="#">Report 2</a></li>
-					<li role="presentation"><a href="#">Report 3</a></li>
+
+				<ul class="nav nav-tabs" role="tablist" id="myTab">
+					<li role="presentation" class="active"><a href="#g1" aria-controls="g1" role="tab" data-toggle="tab">Monthly Sales</a></li>
+				  	<li role="presentation"><a href="#g2" aria-controls="g2" role="tab" data-toggle="tab">Individual Sales</a></li>
+				  	<li role="presentation"><a href="#g3" aria-controls="g3" role="tab" data-toggle="tab">Yearly Sales</a></li>
 				</ul>
-<!-- <div id="graph2"></div> -->
+
+				<div class="tab-content">
+				  	<div role="tabpanel" class="tab-pane active" id="g1"><div id="graph1"></div></div>
+				  	<div role="tabpanel" class="tab-pane" id="g2"><div id="graph2"></div></div>
+				  	<div role="tabpanel" class="tab-pane" id="g3"><div id="graph3"></div></div>
+				</div>
+
 			</div>
 		</div>
 	</div>
