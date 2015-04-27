@@ -26,7 +26,7 @@ function documentKeyUp(e) {
 	if (keyCode == 113) {
 		// ref: http://stackoverflow.com/a/480754/577298
 		$("#search").focus();
-	} else if (keyCode == 27) {
+	} else if (keyCode == 27 && $("#search").val() != '') {
 		document.getElementById("search-form").reset();
 		location.reload();
 	}
@@ -40,8 +40,8 @@ function setSearchHeader(search_term) {
 
 $(function() {
 	$("#navigation").load("nav.html", function() {
-		//ref: https://jqueryui.com/autocomplete/
-		//ref: http://stackoverflow.com/a/4450861/577298
+		// ref: https://jqueryui.com/autocomplete/
+		// ref: http://stackoverflow.com/a/4450861/577298
 		$("#search").autocomplete({
 			source : availableTags
 		});
