@@ -92,5 +92,5 @@ function addNote() {
 					+ now.toLocaleTimeString() + "</p>"
 					+ $("#message-text").val() + "</div>");
 
-	$("#message-text").val('')
+	$("#message-text").val('');
 }
