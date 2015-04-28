@@ -4,23 +4,6 @@
 <meta name="viewport" content="width=device-width, inital-scale=1.0">
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <link href="../css/styles.css" rel="stylesheet">
-<style>
-.row {
-	background-color: #C4C4C7;
-}
-
-.tlrow {
-	padding-bottom: 1em;
-}
-
-.tlrow:first-child {
-	padding-top: 40px;
-}
-
-p {
-	margin: 0
-}
-</style>
 
 <!-- for search bar -->
 <script
@@ -39,18 +22,15 @@ p {
 	<div id="navigation"></div>
 	<div id="search-results"></div>
 	<div class="container">
-		<div class="row tlrow" style="padding-left: 1em; padding-right: 1em;">
-			<h1>Create Order</h1>
-			<form name="name4search" method="get" action=" ">
-				<div class="col-xs-6">
-					<div class="form-group">
-						<input type="name" class="form-control" id="searchNames"
-							placeholder="Enter Customer Name"></input>
-						<button type="button" class="btn btn-primary"
-							onclick="getValues()">Select</button>
-					</div>
-				</div>
-			</form>
+		<div class="row tlrow">
+			<div class="col-xs-6">
+				<h1>Create Order</h1>
+				<form name="name4search" method="get" action=" ">
+					<input class="form-control" id="searchNames"
+						placeholder="Enter Customer Name (Press F4 to focus)"
+						onkeyup="getValues(event)"></input>
+				</form>
+			</div>
 		</div>
 		<div class="row tlrow">
 			<div class="col-xs-12">
@@ -59,14 +39,13 @@ p {
 						<div class="panel panel-default height">
 							<div class="panel-heading">Billing Details</div>
 							<div class="panel-body">
-								<strong><input type="name" class="form-control"
-									id="cus_name" placeholder="Customer Name"></input></strong> <input
-									type="name" class="form-control" id="b_addr"
-									placeholder="Street Address"></input> <input type="name"
-									class="form-control" id="b_city" placeholder="City"></input> <input
-									type="name" class="form-control" id="b_state"
-									placeholder="State"></input> <input type="name"
-									class="form-control" id="b_zip" placeholder="Zip"></input> <br>
+								<strong><input class="form-control" id="cus_name"
+									placeholder="Customer Name"></input></strong> <input
+									class="form-control" id="b_addr" placeholder="Street Address"></input>
+								<input class="form-control" id="b_city" placeholder="City"></input>
+								<input class="form-control" id="b_state" placeholder="State"></input>
+								<input class="form-control" id="b_zip" placeholder="Zip"></input>
+								<br>
 							</div>
 							<div class="text-right" style="padding: .5em">
 								<a href="">Edit</a>
@@ -77,11 +56,11 @@ p {
 						<div class="panel panel-default height">
 							<div class="panel-heading">Payment Information</div>
 							<div class="panel-body">
-								<input type="name" class="form-control" id="card_type"
-									placeholder="Card Type"></input> <input type="name"
-									class="form-control" id="card_num" placeholder="Card #"></input>
-								<input type="name" class="form-control" id="card_exp"
-									placeholder="Exp Date"></input> <br>
+								<input class="form-control" id="card_type"
+									placeholder="Card Type"></input> <input class="form-control"
+									id="card_num" placeholder="Card #"></input> <input
+									class="form-control" id="card_exp" placeholder="Exp Date"></input>
+								<br>
 							</div>
 							<div class="text-right" style="padding: .5em">
 								<a href="">Edit</a>
@@ -92,12 +71,11 @@ p {
 						<div class="panel panel-default height">
 							<div class="panel-heading">Order Preferences</div>
 							<div class="panel-body">
-								<input type="name" class="form-control" id="gift"
-									placeholder="Gift Item?"></input> <input type="name"
-									class="form-control" id="exp_delivery"
-									placeholder="Express Delivery"></input> <input type="name"
+								<input class="form-control" id="gift" placeholder="Gift Item?"></input>
+								<input class="form-control" id="exp_delivery"
+									placeholder="Express Delivery"></input> <input
 									class="form-control" id="insurance"
-									placeholder="Insurance Value"></input> <input type="name"
+									placeholder="Insurance Value"></input> <input
 									class="form-control" id="coupon" placeholder="Coupon"></input>
 								<br>
 							</div>
@@ -110,14 +88,13 @@ p {
 						<div class="panel panel-default height">
 							<div class="panel-heading">Shipping Address</div>
 							<div class="panel-body">
-								<strong><input type="name" class="form-control"
-									id="s_name" placeholder="Coustmer Name"></input></strong> <input
-									type="name" class="form-control" id="s_addr"
-									placeholder="Street Address"></input> <input type="name"
-									class="form-control" id="s_city" placeholder="City"></input> <input
-									type="name" class="form-control" id="s_state"
-									placeholder="State"></input> <input type="name"
-									class="form-control" id="s_zip" placeholder="Zip"></input> <br>
+								<strong><input class="form-control" id="s_name"
+									placeholder="Customer Name"></input></strong> <input
+									class="form-control" id="s_addr" placeholder="Street Address"></input>
+								<input class="form-control" id="s_city" placeholder="City"></input>
+								<input class="form-control" id="s_state" placeholder="State"></input>
+								<input class="form-control" id="s_zip" placeholder="Zip"></input>
+								<br>
 							</div>
 							<div class="text-right" style="padding: .5em">
 								<a href="">Edit</a>
