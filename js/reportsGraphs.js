@@ -233,5 +233,40 @@ $(function () {
             }
         }]
     });
+//---------------------------------------------Yearly Sales---------------------------------------------
+    $('#graph4').highcharts({
+        title: {
+            text: 'Personal Sales'
+        },
+        xAxis: {
+            categories: ['Faucets Direct', 'Build', 'Build', 'Faucets Direct', 'Build', 'Build']
+        },
+        series: [{
+            type: 'column',
+            name: 'Reconcile Revenue',
+            data: [32234, 32234, 3234, 32234, 32234, 3234]
+        }, {
+            type: 'column',
+            name: 'Total Revenue',
+            data: [100523, 100523, 10523, 100523, 100523, 10523]
+        }, {
+            type: 'column',
+            name: 'COGS',
+            data: [90123, 90123, 9123, 90123, 90123, 9123]
+        }, {
+            type: 'column',
+            name: 'Shipping Charges',
+            data: [3000, 3000, 200, 3000, 3000, 200]
+        }, {
+            type: 'column',
+            name: 'Total Commission',
+            data: [1023, 423, 923, 1023, 423, 923],
+            marker: {
+                lineWidth: 2,
+                lineColor: Highcharts.getOptions().colors[3],
+                fillColor: 'white'
+            }
+        }]
+    });
 
 });
